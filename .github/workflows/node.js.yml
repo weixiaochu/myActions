@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 env:
-  BDUSS: 'testBDUSS'
+  BDUSS: ${{ secrets.BDUSS }}
 
 jobs:
   build:
