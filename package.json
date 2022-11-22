@@ -1,0 +1,19 @@
+{
+  "name": "myactions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weixiaochu/myActions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weixiaochu/myActions/issues"
+  },
+  "homepage": "https://github.com/weixiaochu/myActions#readme"
+}
