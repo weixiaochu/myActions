@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/weixiaochu/myActions/issues"
   },
-  "homepage": "https://github.com/weixiaochu/myActions#readme"
+  "homepage": "https://github.com/weixiaochu/myActions#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "got": "^12.5.3",
+    "request": "^2.88.2",
+    "socks-proxy-agent": "^7.0.0"
+  }
 }
