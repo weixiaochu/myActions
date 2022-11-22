@@ -64,6 +64,8 @@ function sendMessage(token, content) {
 		body: requestData
 	}, function(error, response, body) {
 		console.log(body)
+		console.log(error)
+		console.log(response)
 		if (!error && response.statusCode == 200) {}
 	});
 }
