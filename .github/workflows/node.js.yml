@@ -8,6 +8,10 @@ on:
 
 env:
   BDUSS: ${{ secrets.BDUSS }}
+  proxy: ${{ secrets.proxy }}
+  corpId: ${{ secrets.corpId }}
+  corpSecret: ${{ secrets.corpSecret }}
+  agentId: ${{ secrets.corpSecret }}
 
 jobs:
   build:
