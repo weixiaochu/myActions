@@ -16,7 +16,7 @@ const corpId = process.env.corpId
 // 应用密钥 替换成自己
 const corpSecret = process.env.corpSecret
 // 应用ID 替换成自己
-const agentId = process.env.agentId
+const agentId = parseInt(process.env.agentId)
 // 发送给所有人
 const toUser = '@all'
 
