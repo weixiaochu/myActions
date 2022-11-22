@@ -1,23 +1,18 @@
+name: CI
 on:
   push:
-    branches: [ "main" ]
-  workflow_dispatch:
-
-env:
-  BDUSS: 'BDUSS'    # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
-  NODE_VERSION: '14.x'                # set this to the node version to use
-
-permissions:
-  contents: read
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
+  # This workflow contains a single job called "build"
   build:
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-
-    - name: npm install, build, and test
-      run: |
-        npm run test
-
+      - name: try to build the project
+        run: npm run test
 
