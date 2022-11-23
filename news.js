@@ -96,8 +96,7 @@ function sendText(content) {
 			str +=$(elem).html().replace("<br>", "").replaceAll("<br>", "\n")
 		}
 	});
-	console.log(str)
-        // sendText(newsContents.replaceAll("<br>", "\n"))
+        sendText(str)
     } catch (error) {
         console.log(error);
     }
