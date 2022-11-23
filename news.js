@@ -88,13 +88,15 @@ function sendText(content) {
         let newsUrl = result.attr('href');
         
         const resp = await got(newsUrl);   //想抓取的网址
-        $ = cheerio.load(resp.body)//获取网址的DOM结构        
+	$ = cheerio.load(resp.body)//获取网址的DOM结构        
 
-        let newsContent = $('#content > div.post_body')
-	console.log($(newsContent).html())
-	let newsContents= $(newsContent).children().eq(1).html().replace("<br>", "")
-	console.log(1)
-	console.log(newsContents)
+	var str = "";
+	$('#content > div.post_body > p').each(function(i, elem) {				
+		if($(elem).html().indexOf('img') == -1 ) {
+			str +=$(elem).html().replace("<br>", "").replaceAll("<br>", "\n")
+		}
+	});
+	console.log(str)
         // sendText(newsContents.replaceAll("<br>", "\n"))
     } catch (error) {
         console.log(error);
