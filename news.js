@@ -64,8 +64,6 @@ function sendMessage(token, content) {
 		body: requestData
 	}, function(error, response, body) {
 		console.log(body)
-		console.log(error)
-		console.log(response)
 		if (!error && response.statusCode == 200) {}
 	});
 }
@@ -93,11 +91,9 @@ function sendText(content) {
         $ = cheerio.load(resp.body)//获取网址的DOM结构        
 
         let newsContent = $('#content > div.post_body')
-        let res = newsContent.contents()[2]
+	let newsContents= $(newsContent).children().eq(1).html().replace("<br>", "")
 
-        let newContents = $(res).html()
-
-        sendText(newContents.replaceAll("<br>", "\n"))
+        sendText(newsContents.replaceAll("<br>", "\n"))
     } catch (error) {
         console.log(error);
     }
