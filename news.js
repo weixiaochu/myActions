@@ -91,9 +91,10 @@ function sendText(content) {
         $ = cheerio.load(resp.body)//获取网址的DOM结构        
 
         let newsContent = $('#content > div.post_body')
+	console.log(newsContent)
 	let newsContents= $(newsContent).children().eq(1).html().replace("<br>", "")
-
-        sendText(newsContents.replaceAll("<br>", "\n"))
+	console.log(newsContents)
+        // sendText(newsContents.replaceAll("<br>", "\n"))
     } catch (error) {
         console.log(error);
     }
