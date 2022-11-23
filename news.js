@@ -92,7 +92,7 @@ function sendText(content) {
 
         let newsContent = $('#content > div.post_body')
 	console.log($(newsContent).html())
-	let newsContents= $(newsContent).children().eq(1).html().replace("<br>", "")
+	let newsContents= $(newsContent).children().eq(0).html().replace("<br>", "")
 	console.log(newsContents)
         // sendText(newsContents.replaceAll("<br>", "\n"))
     } catch (error) {
