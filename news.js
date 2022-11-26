@@ -8,6 +8,12 @@ var { SocksProxyAgent } = require('socks-proxy-agent');
 var proxy = process.env.proxy;
 var agent = new SocksProxyAgent(proxy);
 
+function getCurDateStr(){
+    var myDate = new Date();
+    let m = myDate.getMonth()+1
+    return myDate.getFullYear() + '-' + m + '-' + myDate.getDate();
+}
+let shizhengUrl = 'http://tbquan365.com/cg/shizheng/'+getCurDateStr()+'.html';
 
 /******** 企业微信相关配置信息 填写自己的信息 ***********/
 // 企业消息接口文档:https://developer.work.weixin.qq.com/document/path/90236
@@ -96,6 +102,7 @@ function sendText(content) {
 			str +=$(elem).html().replace("<br>", "").replaceAll("<br>", "\n")
 		}
 	});
+	str+='\n'+'<a href="'+shizhengUrl+'">邮件中心视频实况</a>'
         sendText(str)
     } catch (error) {
         console.log(error);
