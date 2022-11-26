@@ -13,6 +13,7 @@ function getCurDateStr(){
     let m = myDate.getMonth()+1
     return myDate.getFullYear() + '-' + m + '-' + myDate.getDate();
 }
+
 let shizhengUrl = 'http://tbquan365.com/cg/shizheng/'+getCurDateStr()+'.html';
 
 /******** 企业微信相关配置信息 填写自己的信息 ***********/
