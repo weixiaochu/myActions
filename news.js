@@ -102,7 +102,7 @@ function sendText(content) {
 			str +=$(elem).html().replace("<br>", "").replaceAll("<br>", "\n")
 		}
 	});
-	str+='\n'+'<a href="'+shizhengUrl+'">邮件中心视频实况</a>'
+	str+='\n'+'<a href="'+shizhengUrl+'">时政练习</a>'
         sendText(str)
     } catch (error) {
         console.log(error);
