@@ -14,7 +14,7 @@ function getCurDateStr(){
     return myDate.getFullYear() + '-' + m + '-' + myDate.getDate();
 }
 
-let shizhengUrl = 'http://tbquan365.com/cg/shizheng/'+getCurDateStr()+'.html';
+let shizhengUrl = 'http://www.tbquan365.com/cg/shizheng/'+getCurDateStr()+'.html';
 
 /******** 企业微信相关配置信息 填写自己的信息 ***********/
 // 企业消息接口文档:https://developer.work.weixin.qq.com/document/path/90236
