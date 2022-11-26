@@ -20,6 +20,6 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/news@main
+    - uses: actions/checkout@main
     - run: npm i
     - run: npm test
