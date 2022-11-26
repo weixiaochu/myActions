@@ -22,6 +22,6 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/main@7d725b21b0a0b886e7ec7a785684a3f504a8bee1
     - run: npm i
     - run: npm test
