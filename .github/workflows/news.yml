@@ -1,6 +1,8 @@
 name: news
 
-on: push
+on:
+  schedule:
+    - cron:  '0 0 * * *'
 
 env:
   BDUSS: ${{ secrets.BDUSS }}
